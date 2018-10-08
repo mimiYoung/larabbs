@@ -15,12 +15,44 @@
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- 左侧边栏 Navbar -->
-            <ul class="nav navbar-nav"></ul>
+            <ul class="nav navbar-nav navbar-right"></ul>
 
             <!-- 右侧边栏 Navbar -->
-            <ul>
-                <li><a href="#" class="">登录</a></li>
-                <li><a href="#" class="">注册</a></li>
+            <ul class="nav navbar-nav navbar-right">
+            @guest
+                <li>
+                    <a href="{{ route('login') }}">
+                        <span class="">登录</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('register') }}">
+                        <span class="">注册</span>
+                    </a>
+                </li>
+            @else
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <span class="user-avatar pull-left" style="margin-right:8px; margin-top:-5px">
+                                <img src="https://fsdhubcdn.phphub.org/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/60/h/60" class="img-responsive img-circle" width="30px" height="30px">
+                        </span>
+                        {{ Auth::user()->name }} <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="{{ route('logout') }}"
+                                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                退出登录
+                            </a>
+
+                            <form action="{{ route('logout') }}" id="logout-form" method="POST" style="display:none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+            @endguest
             </ul>
         </div>
     </div>
