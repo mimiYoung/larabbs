@@ -20,10 +20,6 @@ body {
     border-top: 4px solid #00b5ad;
     margin-bottom: 40px;
     margin-top: 0px;
-
-    #app-navbar-collapse {
-
-    }
 }
 
 /* Sticky footer styles */
@@ -57,5 +53,14 @@ body {
                 color: inherit;
             }
         }
+    }
+}
+
+/* User register page */
+.register-page {
+    img.captcha {
+        margin-bottom: 0px;
+        margin-top: 10px;
+        cursor: pointer;
     }
 }
