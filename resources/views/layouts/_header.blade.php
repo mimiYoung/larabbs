@@ -3,7 +3,7 @@
         <div class="navbar-header">
             <!-- 折叠菜单 -->
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                <span class="sr-only">Toggle Navigation</span>
+                <span class="sr-only">隐藏导航</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -15,7 +15,7 @@
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- 左侧边栏 Navbar -->
-            <ul class="nav navbar-nav navbar-right"></ul>
+            <ul class="nav navbar-nav navbar-left"></ul>
 
             <!-- 右侧边栏 Navbar -->
             <ul class="nav navbar-nav navbar-right">
