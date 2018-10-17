@@ -38,6 +38,8 @@ class UserRequest extends FormRequest
             'name.regex' => '用户名支持英文、数字、横杠和下划线',
             'name.between' => '用户名需要在 3 - 25 个字符之间',
             'name.required' => '用户名不能为空',
+            'avatar.mines' => '头像格式须为 jpeg, bmp, png, gif',
+            'avatar.dimensions' => '图片的宽高须 200px 以上'
         ];
     }
 }
