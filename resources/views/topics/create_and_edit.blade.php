@@ -35,9 +35,9 @@
 
                     <div class="form-group">
                         <select class="form-control" name="category_id" required>
-                            <option value="" hidden disabled selected>请选择类别</option>
+                            <option value="" hidden disabled {{ $topic->id ? '' : 'selected' }}>请选择类别</option>
                             @foreach ($categories as $item)
-                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                <option value="{{ $item->id }}" {{ $topic->category_id == $item->id ? 'selected' : '' }}>{{ $item->name }}</option>
                             @endforeach
                         </select>
                     </div>
