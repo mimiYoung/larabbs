@@ -8979,6 +8979,15 @@ body {
   color: #b3b3b3;
 }
 
+.reply-box {
+  margin-bottom: 16px;
+}
+
+.reply-box hr {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
 /* Notifications badge */
 
 .notifications-badge {
