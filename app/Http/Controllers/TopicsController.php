@@ -66,7 +66,6 @@ class TopicsController extends Controller
 		return redirect()->route('topics.index')->with('success', '删除成功！');
     }
 
-
     public function uploadImage(Request $request, ImageUploadHandler $uploader)
     {
         // 初始化返回数据，默认是失败的
